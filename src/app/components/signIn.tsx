@@ -8,7 +8,7 @@ export default function SignInPage() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleSignIn = () => {
-    signIn("google", {callbackUrl:`${process.env.NEXT_PUBLIC_APP_URL}`})
+    signIn("google", {callbackUrl:`${process.env.NEXT_PUBLIC_APP_URL}/dashboard`})
   };
 
   return (

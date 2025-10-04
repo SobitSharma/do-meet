@@ -1,6 +1,6 @@
-import Dashboard from "./dashboard/dashboard";
+import SignInPage from "./components/signIn";
 export default function Page(){
   return(
-    <Dashboard/>
+    <SignInPage/>
   )
 }
