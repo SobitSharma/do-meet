@@ -33,9 +33,16 @@ Do-Meet is a seamless video meeting app designed to simplify online collaboratio
    GOOGLE_CLIENT_SECRET= get from google console
    NEXTAUTH_SECRET = example -your random string
    NEXT_PUBLIC_APP_URL=http://localhost:3000
+   DATABASE_URL=postgres://postgres:mypassword@localhost:5432/postgres
 
-3. **Run the App**
+3. **Configure the DB instance locally**
+   ```
+   docker pull postgres
+   docker run --name drizzle-postgres -e POSTGRES_PASSWORD=mypassword -d -p 5432:5432 postgres
+
+4. **Run the App**
     ```
     bun run dev
+
 
     
