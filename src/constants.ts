@@ -1,14 +1,28 @@
-import { Home, Video } from "lucide-react";
+import { Home, Video , File, PlusIcon, HomeIcon} from "lucide-react";
 
 export const Constant_SideBarData = [
     {
         title:'Home',
         url:'/dashboard',
-        icon:Home
+        icon:HomeIcon
     },
     {
-        title:'Create-Meet',
+        title:'Upcoming',
+        url:'/meet',
+        icon:File
+    },
+    {
+        title:'Previous',
+        url:'/meet',
+        icon:File
+    },
+    {
+        title:'Recordings',
         url:'/meet',
         icon:Video
-    },
+    },{
+        title:'PersonalRoom',
+        url:'/meet',
+        icon:PlusIcon
+    }
 ]

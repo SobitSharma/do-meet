@@ -14,10 +14,12 @@ import {
 } from "@/components/ui/sidebar"
 import { Constant_SideBarData } from "@/constants"
 import Link from "next/link"
-import { useSession } from "next-auth/react"
+import { signOut, useSession } from "next-auth/react"
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
 import LogOutButton from "./signout"
 import { Video } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { LogOut } from "lucide-react"
 
 export function AppSidebar() {
   const { data: session } = useSession()
@@ -104,7 +106,14 @@ export function AppSidebar() {
             </Avatar>
           </div>
         )}
-        <LogOutButton />
+        {
+          !isCollapsed ? (
+            <LogOutButton/>
+          ) : 
+          (
+          <Button onClick={()=>signOut()}><LogOut/></Button>
+          )
+        }
       </SidebarFooter>
     </Sidebar>
   )

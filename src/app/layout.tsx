@@ -4,6 +4,8 @@ import "./globals.css";
 import Providers from "./providers";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/auth";
+import StreamProvider from "./providers/StreamProvider";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,7 +33,9 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers session={session}>
-              {children}
+          <StreamProvider>
+               {children}
+          </StreamProvider>
         </Providers>
       </body>
     </html>
