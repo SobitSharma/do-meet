@@ -1,6 +1,7 @@
 import Providers from "../providers";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "../components/app-sidebar";
+import StreamProvider from "../providers/StreamProvider";
 
 export default async function PrivateLayout({
   children,
@@ -12,7 +13,7 @@ export default async function PrivateLayout({
             <AppSidebar/>
             <main>
               <SidebarTrigger/>
-              {children}
+                {children}
             </main>
           </SidebarProvider>
   );
